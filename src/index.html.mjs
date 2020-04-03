@@ -1,6 +1,7 @@
 export default async (includeFile) => `<!DOCTYPE html>
 <html>
     <head>
+${await includeFile("src/head.html")}
         <style>
 ${await includeFile("src/style.css")}
         </style>
