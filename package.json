@@ -1,9 +1,11 @@
 {
   "scripts": {
     "format": "prettier --write package.json src scripts",
-    "build": "node scripts/compile.mjs"
+    "build": "node scripts/compile.mjs",
+    "start": "node scripts/devserver.mjs"
   },
   "devDependencies": {
+    "http-server": "^0.12.1",
     "prettier": "^2.0.2",
     "rollup": "^2.3.2",
     "rollup-plugin-typescript": "^1.0.1",

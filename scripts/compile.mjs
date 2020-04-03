@@ -34,7 +34,7 @@ async function includeTypescript(path) {
   return singleOutput.code;
 }
 
-async function main() {
+export default async function main() {
   fs.mkdirSync("dist", { recursive: true });
   fs.writeFileSync("dist/index.html", await template(includeFile), "utf8");
 }
