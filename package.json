@@ -1,8 +1,10 @@
 {
   "scripts": {
+    "format": "prettier --write package.json src scripts",
     "build": "node scripts/compile.mjs"
   },
   "devDependencies": {
+    "prettier": "^2.0.2",
     "rollup": "^2.3.2",
     "rollup-plugin-typescript": "^1.0.1",
     "tslib": "^1.11.1",
