@@ -35,6 +35,7 @@ async function includeTypescript(path) {
 }
 
 async function main() {
+  fs.mkdirSync("dist", { recursive: true });
   fs.writeFileSync("dist/index.html", await template(includeFile), "utf8");
 }
 
