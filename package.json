@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "format": "prettier --write package.json src scripts",
+    "format": "prettier --write package.json tsconfig.json src scripts",
     "build": "node scripts/compile.mjs",
     "start": "node scripts/devserver.mjs"
   },
