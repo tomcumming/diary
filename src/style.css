@@ -23,27 +23,32 @@ nav {
   position: absolute;
   z-index: 10;
 
-  transition: width 0.5s ease, height 0.1s ease, background-color 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+
+  transition: width 0.5s ease, height 0.1s ease;
 }
 
 nav.open {
   width: 100vw;
   height: 100vh;
-
-  background: greenyellow;
 }
 
 nav .toggle {
   display: flex;
   justify-content: flex-end;
+  transition: background-color 0.5s ease;
 }
 
-nav.open toggle {
+nav.open .toggle {
   background-color: darkblue;
 }
 
 nav .toggle input[type="checkbox"] {
   -moz-appearance: none;
+  -webkit-appearance: none;
   width: 40px;
   height: 40px;
 
@@ -54,7 +59,7 @@ nav .toggle input[type="checkbox"] {
   margin: 4px;
 
   border-radius: 8px;
-  background-color: lightblue;
+  background-color: #ffffffcc;
 }
 
 nav .toggle input[type="checkbox"] {
@@ -67,6 +72,16 @@ nav .toggle input[type="checkbox"]:checked::after {
 
 nav .toggle input[type="checkbox"]:not(:checked)::after {
   content: "menu";
+}
+
+nav ul {
+  flex-grow: 1;
+  overflow: scroll;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  background: gold;
 }
 
 article {
