@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+main {
+  flex-grow: 1;
+}
+
+nav {
+  width: calc(40px + 4px + 4px);
+  height: calc(40px + 4px + 4px);
+
+  position: absolute;
+  z-index: 10;
+
+  transition: width 0.5s ease, height 0.1s ease, background-color 0.5s ease;
+}
+
+nav.open {
+  width: 100vw;
+  height: 100vh;
+
+  background: greenyellow;
+}
+
+nav .toggle {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav.open toggle {
+  background-color: darkblue;
+}
+
+nav .toggle input[type="checkbox"] {
+  -moz-appearance: none;
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 4px;
+
+  border-radius: 8px;
+  background-color: lightblue;
+}
+
+nav .toggle input[type="checkbox"] {
+  font-size: 12px;
+}
+
+nav .toggle input[type="checkbox"]:checked::after {
+  content: "close";
+}
+
+nav .toggle input[type="checkbox"]:not(:checked)::after {
+  content: "menu";
+}
+
+article {
+  position: absolute;
+  z-index: 1;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: pink;
+}
