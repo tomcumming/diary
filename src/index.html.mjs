@@ -1,18 +1,23 @@
-export default async (includeFile) => `<!DOCTYPE html>
+import { TEMPLATES } from "../scripts/compile.mjs";
+
+export default async (includeItem) => `<!DOCTYPE html>
 <html>
     <head>
-${await includeFile("src/head.html")}
+${await includeItem("src/head.html")}
         <style>
-${await includeFile("src/style.css")}
+${await includeItem("src/style.css")}
         </style>
         <script>
-${await includeFile("src/index.ts")}
+${await includeItem("src/index.ts")}
         </script>
     </head>
     <body>
-${await includeFile("src/body.html")}
+        <main>
+            <diary-nav></diary-nav>
+            <article>Blah blah</article>
+        </main>
 
-${await includeFile("src/templates.html")}
+${await includeItem(TEMPLATES)}
     </body>
 </html>
 `;

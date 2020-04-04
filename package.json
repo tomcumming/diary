@@ -2,10 +2,12 @@
   "scripts": {
     "format": "prettier --write package.json tsconfig.json src scripts",
     "build": "node scripts/compile.mjs",
-    "start": "node scripts/devserver.mjs"
+    "start": "node scripts/devserver.mjs",
+    "check": "tsc"
   },
   "devDependencies": {
     "http-server": "^0.12.1",
+    "node-watch": "^0.6.3",
     "prettier": "^2.0.2",
     "rollup": "^2.3.2",
     "rollup-plugin-typescript": "^1.0.1",
